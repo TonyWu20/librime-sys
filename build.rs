@@ -4,8 +4,9 @@ use std::env;
 use std::path::PathBuf;
 
 fn main() {
-    let librime_include_dir = env::var("LIBRIME_INCLUDE_DIR").unwrap_or("include".to_owned());
-    let librime_lib_dir = env::var("LIBRIME_LIB_DIR").unwrap_or("lib".to_owned());
+    let librime_include_dir =
+        env::var("LIBRIME_INCLUDE_DIR").unwrap_or("librime/dist/include".to_owned());
+    let librime_lib_dir = env::var("LIBRIME_LIB_DIR").unwrap_or("librime/dist/lib".to_owned());
 
     println!("cargo:rustc-link-search={librime_lib_dir}");
     println!("cargo:rustc-link-lib=rime");
