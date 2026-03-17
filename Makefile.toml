@@ -1,6 +1,6 @@
-[env]
-LIBRIME_INCLUDE_DIR = "${CARGO_MAKE_WORKING_DIRECTORY}/librime/dist/include"
-LIBRIME_LIB_DIR = "${CARGO_MAKE_WORKING_DIRECTORY}/librime/dist/lib"
+# [env]
+# LIBRIME_INCLUDE_DIR = "${CARGO_MAKE_WORKING_DIRECTORY}/librime/dist/include"
+# LIBRIME_LIB_DIR = "${CARGO_MAKE_WORKING_DIRECTORY}/librime/dist/lib"
 
 [tasks.pre-build]
 condition = { platforms = ["mac", "windows"], files_not_exist = ["${CARGO_MAKE_WORKING_DIRECTORY}/librime"] }
